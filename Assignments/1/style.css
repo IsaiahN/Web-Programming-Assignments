@@ -1,0 +1,66 @@
+/*
+* Author: Isaiah Nwukor
+* Portfolio Stylesheet
+*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Prata&display=swap');
+
+
+/* Main Styles */
+body {background: url("dust.png") repeat;font-family: "Prata", serif;width: 100%;}
+body, html {margin:0;padding:0;}
+h1, h2, h3, h4, h5, h6, #nav, ul, table {font-family: "Open Sans", sans-serif;}
+a {text-decoration:none; color:#493fa9;}
+a:hover {color:#411463;cursor:pointer;text-decoration:underline;}
+hr {border:initial;border-bottom: 1px solid #dcdada;margin: 30px auto;}
+
+/* Home Page */
+div#nav {z-index:1;position:fixed;width:96%;box-shadow:0px 1px 7px -4px #252525;border-bottom: 1px solid #ddd;height:80px;background:white;padding: 0 2%;}
+div#nav #left_section {float:left;line-height:80px;font-size:20pt;}
+div#nav #left_section img {max-height:80px;vertical-align:middle;}
+div#nav #right_section {float:right;}
+div#nav ul {display:inline-flex;list-style:none;margin:0;}
+div#nav ul li {margin:0 15px;line-height:80px;}
+
+div#introduction {clear:both;background-image: url("gsu_library.png");background-repeat: no-repeat;background-size: cover;width: 100%;margin:0;padding-top:80px;height:350px;}
+
+
+div#inner_box {background:#063b6b73;display:block;width:100%;height:100%;position:relative;display:flex;justify-content:center;align-items:center;flex-direction:column;}
+div#inner_box h2 {font-size:30pt;color:white;text-shadow: 0px 1px 3px #0000009e;}
+div#inner_box p {font-size:15pt;color:white;background:#2522228c;padding:10pt;border-radius:10px;}
+div#inner_box a {color:#ffa500;}
+
+div#about {display:flex;justify-content:space-around;padding:40px;background:#dbe1d773;padding:5%;width:90%;}
+div#about ul li {list-style:none;font-weight:bold;line-height:4em;display:inline-grid;padding:10px;}
+div#about ul ul li {font-weight:normal;line-height:3em;display:block;background:initial;background:#00000017;margin:10px;border-radius:3px;padding:0px 15px;}
+div#about img {max-height:400px;}
+
+div#favorites {display:flex;justify-content: space-evenly;width:80%;margin: 0 auto;padding:20pt;line-height:2em;}
+div#favorites li {list-style: upper-roman;line-height: 2.5em;}
+
+table#assignments {
+width: 80%;
+margin: 0 auto;
+border: 1px solid #22222259;
+padding:10px;
+margin-bottom:40px;
+}
+table#assignments th {background:#49495447;}
+table#assignments td, table#assignments th {padding:10px;}
+table#assignments tr:nth-child(even) {background: #54667757;}
+table#assignments tr:nth-child(odd) {background: #f1f1f1;}
+.subhead {text-align:center;font-weight:bold;}
+
+/* Resume Page */
+div#resume {width: 60%;background:#ffffff;border: 1px solid #a9a9ad;margin:60px auto;padding:3% 5%;}
+div#resume .text_change {font-weight:bold;color:red;}
+div#resume h3 {color:#6f6e75;margin-top:40px;margin-bottom:5px;}
+div#resume h4 {margin-top:0px;color:#191818;}
+
+div#quote {background:#e8e6fc; border: 1px solid #bdbccd;border-radius:3px; padding: 0px 20px 20px 30px;}
+div#quote h5 {font-size:12pt;letter-spacing:5px;border: 1px solid #84828d;display:inline-block;border-radius:5px;padding:4px 7px 4px 12px;background:#8e8b98;color:white;margin-bottom:0px;}
+div#quote li {list-style:square;}
+div#quote p {font-style:italic;font-size:14pt;}
+div#quote span {font-weight:bold;}
+
