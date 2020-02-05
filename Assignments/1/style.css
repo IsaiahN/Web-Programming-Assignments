@@ -37,7 +37,8 @@ div#about ul ul li {font-weight:normal;line-height:3em;display:block;background:
 div#about img {max-height:400px;}
 
 div#favorites {display:flex;justify-content: space-evenly;width:80%;margin: 0 auto;padding:20pt;line-height:2em;}
-div#favorites li {list-style: upper-roman;line-height: 2.5em;}
+div#favorites li {line-height: 2.5em;}
+div#favorites ol li {list-style: upper-roman;}
 
 table#assignments {
 width: 80%;
