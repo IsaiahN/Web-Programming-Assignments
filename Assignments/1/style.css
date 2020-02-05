@@ -58,6 +58,7 @@ div#resume {width: 60%;background:#ffffff;border: 1px solid #a9a9ad;margin:60px 
 div#resume .text_change {font-weight:bold;color:red;}
 div#resume h3 {color:#6f6e75;margin-top:40px;margin-bottom:5px;}
 div#resume h4 {margin-top:0px;color:#191818;}
+div#resume p {line-height:2.2em}
 
 div#quote {background:#e8e6fc; border: 1px solid #bdbccd;border-radius:3px; padding: 0px 20px 20px 30px;}
 div#quote h5 {font-size:12pt;letter-spacing:5px;border: 1px solid #84828d;display:inline-block;border-radius:5px;padding:4px 7px 4px 12px;background:#8e8b98;color:white;margin-bottom:0px;}
