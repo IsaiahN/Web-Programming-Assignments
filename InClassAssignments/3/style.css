@@ -1,0 +1,11 @@
+/* Main Style */
+
+body{padding-bottom:50px;}
+header {text-align:center;}
+main {width:70%;display:flex;margin:0 auto;}
+main aside {flex-basis:33%;}
+main div {flex-basis:67%;}
+main div img {float:right;width:200px;}
+.clear {clear:both;}
+.dashed_padding {padding:2em;margin:2em; border: 4px dashed red;}
+p.fixed {position:fixed;bottom:5px;background:#eee;}
