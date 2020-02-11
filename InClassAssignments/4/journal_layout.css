@@ -1,0 +1,6 @@
+/* Main Stylesheet */
+.content_wrapper {border: 5px solid green;width:1000px;color:#009097;}
+#section_header {border: 5px solid red;padding:2px;}
+#section_header h2 {border: 5px solid orange;margin:0;}
+span.date {border: 5px solid purple;}
+.section_post {border: 5px solid blue;padding: 6px 4px;}

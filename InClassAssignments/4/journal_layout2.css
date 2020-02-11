@@ -1,0 +1,8 @@
+/* Main Stylesheet */
+body{background:url("./background.gif"); margin: 2% 10%;}
+.content_wrapper {border: 5px solid green;color:#009097;background-color:white;}
+.main_wrapper {margin:0 auto;width:1000px;}
+#section_header {border: 5px solid red;padding:2px;}
+#section_header h2 {border: 5px solid orange;margin:0;}
+span.date {border: 5px solid purple;}
+.section_post {border: 5px solid blue;padding: 5px; margin:10px 0 0 0;background-color:#E8FBFB;}
