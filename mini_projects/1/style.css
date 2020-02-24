@@ -11,6 +11,8 @@ button:hover, a.button:hover, a.button.inverse {cursor:pointer;background:inheri
 #menu {background:#2a2a2b;box-shadow: 0px 1px 7px -4px #000000;padding:0vw 3vw;position:fixed;width:94vw;z-index:2;}
 #menu ul {float:right;}
 #menu li {list-style:none;display:inline-block;padding:15px;}
+#menu h2 {float:left;line-height:1.1em;font-weight:300;font-size:1.85em;letter-spacing:2px;}
+#menu h2 strong {font-weight: 500;}
 
 /* Homepage */
 div#hero_wrapper {padding:10vh 0vw;clear:right;background: url('panther_logo.svg') #181818;background-repeat:no-repeat;background-size: 96vh;background-position:-42vh 20vh;height:100vh;}
@@ -35,9 +37,9 @@ div.action_section div {width:27vw;padding:2vw 3vw;border-right: 1px dotted #323
 div.action_section div#volunteer img {width:100%;border-radius:3px;}
 div.action_section div:last-child {border-right:initial;}
 div.action_section li {list-style-type:square;line-height: 2em;}
-div.action_section dt {font-weight:500;font-size:1.2em;color:#3a68bf;}
-div.action_section dd {line-height:2em;margin-bottom:10px;}
-div.action_section dl {padding-left:4vw;}
+div.action_section dt {font-weight:500;font-size:1.2em;color:#3a68bf;padding-bottom:5px;}
+div.action_section dd {margin-bottom:10px;}
+div.action_section dl {padding-left:2vw;}
 #volunteer .button {margin-right:10px;}
 
 /* Sponsor Section */
@@ -53,19 +55,22 @@ div.action_section dl {padding-left:4vw;}
 #footer ul a:hover {color:#9bafd4;}
 
 /* Responsive */
-@media(max-width:968px) {
+@media only screen and (max-width:968px) {
 p {line-height:1.75em;}
 .grouped_box .photo {width:100%;}
 .grouped_box {width:50%;float:left;max-height:initial;flex-direction:column;}
 .grouped_box.reverse_column {flex-direction:column;}
 .grouped_box div:last-child {padding: 2vw 4vw;}
+#menu ul, #menu h2 {float:initial;text-align:center;padding:0;}
+#menu li {padding: 5px 5px 5px 0px;}
+#info_box h1 {background:#19191b;padding:30px 10px;line-height:1em;}
 }
 
-@media(max-width:568px) {
-#info_box h1 {background:#19191bfa;padding:30px 10px;line-height:1em;}
+@media only screen and (max-width:568px) {
 .grouped_box {width:100%;float:initial;}
 .grouped_box div:last-child{width:90%;margin-bottom:5vw;}
 div.action_section {flex-direction:column;}
 div.action_section div {width:90vw;border:initial;border-bottom: 1px dotted #32343a;}
 div#footer {flex-direction:column;}
+div.action_section div {padding:2vw;}
 }
