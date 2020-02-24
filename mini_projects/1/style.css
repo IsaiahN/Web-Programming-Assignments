@@ -3,7 +3,7 @@ body, html {margin:initial;padding:initial;line-height:1.5em;color:white;}
 body {background:#0e0e0e; font-family: 'Lato', sans-serif;}
 a {text-decoration:none;color:ivory;}
 a:hover {color:gray;}
-button, a.button {text-transform:uppercase;display:inline-block;background:#0039a6;outline:1px solid #0039a6;color:white;border:none;padding:15px 30px;margin-top:5px;margin-bottom:5px;}
+button, a.button {text-transform:uppercase;transition-duration: 0.4s;display:inline-block;background:#0039a6;outline:1px solid #0039a6;color:white;border:none;padding:15px 30px;margin-top:5px;margin-bottom:5px;}
 button:hover, a.button:hover, a.button.inverse {cursor:pointer;background:inherit;outline:1px solid #0039a6; }
 
 
@@ -34,7 +34,7 @@ div#info_box h2 {letter-spacing:5px;color:#d8d8da}
 /* Home - Volunteer & Dates */
 div.action_section {background:#202020;}
 div.action_section div {width:27vw;padding:2vw 3vw;border-right: 1px dotted #32343a;}
-div.action_section div#volunteer img {width:100%;border-radius:3px;}
+div.action_section div#volunteer img {width:100%;border-radius:3px;margin-bottom:7px;}
 div.action_section div:last-child {border-right:initial;}
 div.action_section li {list-style-type:square;line-height: 2em;}
 div.action_section dt {font-weight:500;font-size:1.2em;color:#3a68bf;padding-bottom:5px;}
@@ -48,15 +48,15 @@ div.action_section dl {padding-left:2vw;}
 .sponsor img {height:35px;padding:15px 20px;}
 .sponsor_segment {border-left: 1px dotted #32343a;padding-left:25px;}
 
-#footnote {border-top: 1px solid #ffffff14;padding:1vw 1vw;}
+#footnote {display:block;border-top: 1px solid #ffffff14;padding:1vw 1vw;}
 #footer {background:#2d3442;margin-bottom:0px;padding:2vw 3vw 0vw 3vw;display:flex;}
-#footer span {text-align:center;flex-basis:20%;margin-right:3vw;padding-top:10px;}
+#footer > span {text-align:center;flex-basis:20%;margin-right:3vw;padding-top:10px;}
 #footer ul {flex-basis:25%;list-style:none;line-height:2em;font-size:1.1em;margin-top:0;}
 #footer ul a:hover {color:#9bafd4;}
 
 /* Responsive */
 @media only screen and (max-width:968px) {
-p {line-height:1.75em;}
+p, #footnote {line-height:1.75em;}
 .grouped_box .photo {width:100%;}
 .grouped_box {width:50%;float:left;max-height:initial;flex-direction:column;}
 .grouped_box.reverse_column {flex-direction:column;}
