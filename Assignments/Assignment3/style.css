@@ -1,0 +1,17 @@
+#wrapper {
+    border: 2px solid #ddd;
+    border-radius:10px;
+    box-shadow: 0 0 1px #dedede;
+    padding: 15px 30px;
+    font-family:"Arial", sans-serif;
+    width: 600px;
+    margin: 30px auto;
+}
+#wrapper h1, #wrapper p, #wrapper a {text-align:center;display:block;}
+#wrapper form{border: 1px solid #eeeeee;box-shadow: 0 0 3px #dedede;padding: 30px;}
+#wrapper form label {padding-right:20px;}
+#wrapper form input {border: 1px solid #b9b9b9;padding: 10px;font-size:1em;}
+#wrapper td {padding-top:15px;}
+#info_box {padding: 10px;font-weight:bold;}
+.errors {border: 1px solid #b56c66;background:#ecd0c5;}
+.thanks {border: 1px solid #a4b78e;background:#cae3ac;text-align:center; }

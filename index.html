@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Isaiah Nwukor - Web Developer In Training</title>
+	<style>
+	.red {color:red;}
+	</style>
+<meta http-equiv="refresh" content="0; url=http://codd.cs.gsu.edu/~inwukor1/Assignments/1/" />
+</head>
+	<body>	
+	
+<p>	Question 1:
+Charlie will eat your lunch exactly 50% of the time. Write a function and name
+isBitten() that returns TRUE with 50% probability, and FALSE otherwise.
+Hint: You may find the rand() function useful.
+Below the function, write code to generate a webpage that displays “Charlie ate
+my lunch!” or “Charlie did not eat my lunch!” using the isBitten() function.</p>
+
+<?php
+function isBitten() {
+	return ((rand(0,1) == 1) ? true : false);
+}
+
+if (isBitten() == true) {
+	echo "<p class=\"red\">Charlie ate my lunch!</p>";
+} else {
+	echo "<p>Charlie did not eat my lunch!</p>";
+}
+?>
+
+
+	
+	
+	
+	</body>
+</html>
