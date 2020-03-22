@@ -18,7 +18,7 @@ button:hover, a.button:hover, a.button.inverse {cursor:pointer;background:inheri
 /* Homepage */
 div#hero_wrapper {padding:10vh 0vw;clear:right;background: url('panther_logo.svg') #181818;background-repeat:no-repeat;background-size: 96vh;background-position:-42vh 20vh;height:100vh;}
 
-div#info_box {padding-top:25vh;width:75%;display:block;float:right;text-align:center;}
+div#info_box {word-wrap:break-word;padding-top:25vh;width:75%;display:block;float:right;text-align:center;}
 div#info_box h1 {font-size:4em;font-weight:300;letter-spacing:3px;color:white;text-shadow: 0px 1px 3px #111111;}
 div#info_box h2 {letter-spacing:5px;color:#d8d8da}
 
@@ -179,6 +179,7 @@ p, #footnote {line-height:1.75em;}
 }
 
 @media only screen and (max-width:568px) {
+div#info_box h1 {font-size:3em;}
 .grouped_box {width:100%;float:initial;}
 .grouped_box div:last-child{width:90%;margin-bottom:5vw;}
 div.action_section {flex-direction:column;}

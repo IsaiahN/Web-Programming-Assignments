@@ -15,3 +15,5 @@
 #info_box {padding: 10px;font-weight:bold;}
 .errors {border: 1px solid #b56c66;background:#ecd0c5;}
 .thanks {border: 1px solid #a4b78e;background:#cae3ac;text-align:center; }
+img {margin: 20px auto;display:block;}
+span.red {color:red;font-weight:bold;display:block;}

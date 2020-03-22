@@ -1,0 +1,159 @@
+<html>
+	<head>
+		<title>InClassAssignment 7</title>
+		<style>
+		.red {font-weight:bold;color:red;text-decoration:underline;}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<h3>Fibonacci</h3>
+			<script>
+			var n = 10;
+			var one = 0;
+			var two = 1;
+			for(i = 0; i < n; i++) {
+				
+				var three = one+two;
+				if ( i > 1 ) {
+					one = two;
+					two = three;
+				}
+				else if ( i == 0 ) {
+					three = 0;
+				}
+				
+				document.write(three + ",");
+			}
+			</script>
+			
+			<h3>Stars</h3>
+			<script>
+			var n = 5;
+			for(i = 0; i <= n; i++) {
+				for(j = 0; j < i; j++) {
+					document.write(" * ");
+				}
+				document.writeln("<br/>");
+			}
+			</script>
+			<h3>Array Sort</h3>
+			<p>Original Array: var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];</p>
+			<p>Sample Output: 
+			<script>
+			var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
+			arr1.sort( function( first, second ){ 
+							return first - second;
+						} 
+			);
+			for(i = 0; i < arr1.length; i++) {
+				document.write(arr1[i] + ",");
+			}
+			</script>
+			</p>
+			<h3>Frequent Item</h3>
+			<p>var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3]</p>
+			<p>Sample Output:
+			<script>
+			var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a',2, 4, 9, 3];
+			var arr2= [];
+			for(i = 0; i < arr1.length; i++) {
+			var count = 0;
+				for(j = 0; j < arr1.length; j++) {
+					if( arr1[i] == arr1[j]) {
+						count += 1;
+					}
+				}
+				arr2.push(count);
+			}
+			var max =0;
+			var i_store = 0;
+			for(i = 0; i < arr2.length; i++) {
+			 if (arr2[i] >= max) {
+				max = arr2[i];
+				i_store = i;
+			 }
+			}
+			document.write(arr1[i_store] + " ( " + max +" times )");
+			</script>
+			<h3>Shuffle Array</h3>
+		    <p>var arr1 = [ 3, 8, 7, 6, 5, -4]</p>
+			<p>Sample Output: 
+			<script>
+			var arr1 = [ 3, 8, 7, 6, 5, -4];
+			arr1.reverse();
+			var one = [];
+			var two = [];
+			
+			for(i = 0; i < arr1.length; i++) {
+			var num = Math.round(Math.random());
+			if (i % 2 == num) {
+					one.push(arr1[i]);
+				} else {
+					two.push(arr1[i]);
+				}
+			}
+			var three = one.concat(two);
+			
+			for(i = 0; i < three.length; i++) {
+				document.write(three[i] + ",");
+			}
+			
+			</script>
+			</p>
+			<h3>Javascript Form Validation</h3>
+			<form action="./index.html" method="POST" onsubmit="return testlogin()">
+				<table>
+					<tr>
+						<td><label for="id">ID:</label></td>
+						<td><span class="red"  id="span_id"></span><br/><input type="text" id="id" name="id" placeholder="id"></td>
+					</tr>
+					<tr>
+						<td><label for="fname">First Name:</label></td>
+						<td><span class="red" id="span_fname"></span><br/><input type="text" id="fname" name="fname" placeholder="Enter your first name"></td>
+					</tr>
+					<tr>
+						<td><label for="lname">Last Name:</label></td>
+						<td><span class="red" id="span_lname"></span><br/><input type="text" id="lname" name="lname" placeholder="Enter your last name"></td></tr>
+					<tr>
+						<td></td>
+						<td>
+							<button type="submit" formnovalidate>Add</button>
+						</td>
+					</tr>
+				</table>
+			</form>
+			<script>
+			 function testlogin() {
+			 var list = "You Forgot to Fill In the Following Fields: ";
+				document.getElementById("span_fname").innerHTML = "";
+				document.getElementById("span_lname").innerHTML = "";
+				document.getElementById("span_id").innerHTML = "";
+				var status = true;
+				if (document.getElementById("fname").value.length < 1) {
+					var err = "Please Enter Your First Name";
+					document.getElementById("span_fname").innerHTML = err;
+					list += "First Name,";
+					status = false;
+				}
+				if (document.getElementById("lname").value.length < 1) {
+					var err = "Please Enter Your Last Name";
+					document.getElementById("span_lname").innerHTML = err;
+					list += "Last Name,";
+					status = false;
+				}				
+				if (document.getElementById("id").value.length < 1) {
+					var err = "Please Enter Your ID";
+					document.getElementById("span_id").innerHTML = err;
+					list += "ID";
+					status = false;
+				}				
+				alert(list);
+				
+				return status;
+			 } 
+			</script>
+		</div>	
+		</div>
+	</body>
+</html>
