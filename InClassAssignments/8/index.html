@@ -1,0 +1,182 @@
+<html>
+	<head>
+		<title>InClassAssignment 8</title>
+		<style>
+		li.query {font-weight:bold;color:#333333;}
+li {list-style:none;}
+.wrapper{padding:5%;}
+li ul {margin-bottom:30px;}
+li img {margin:10px;}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+		<h1>In Class Assignment 8</h1>
+		<ul>
+			<li>1) Create a Products table. The structure is given in the following image 
+				<ul>
+					<li>
+					<img src="screen1.jpg" alt="Question 1" />
+				
+					</li>
+					<li class="query">
+					CREATE TABLE webclass.products
+(productID int AUTO_INCREMENT PRIMARY KEY,
+ProductName varchar(40) NOT NULL,
+SupplierID int(11) NULL,
+CategoryID int(11) NULL,
+QuantityPerUnit varchar(20) NULL,
+UnitPrice decimal(10,4)  DEFAULT 0.0000,
+UnitsInStock smallint(2) DEFAULT 0,
+UnitsOnOrder smallint(2) DEFAULT 0,
+ReorderLevel smallint(2) DEFAULT 0,
+Discontinued bit(1) DEFAULT 0);
+
+					</li>
+				</ul>
+			</li>
+			<li>2) If you create 1, right; you can directly use the following lines to insert
+values/ rows into the table
+				<ul>
+					<li>
+					<img src="screen2.jpg" alt="Question 2" />
+				
+					</li>
+					<li class="query">
+					INSERT INTO `Products` (`ProductID`, `ProductName`, `SupplierID`, `CategoryID`,
+`QuantityPerUnit`, `UnitPrice`, `UnitsInStock`, `UnitsOnOrder`, `ReorderLevel`,
+`Discontinued`) VALUES ...<br/>
+
+					SELECT * FROM webclass.products;
+					</li>
+				</ul>
+			</li>
+			<li>3) Write a query to get Product name and quantity/unit.
+				<ul>
+					<li>
+					<img src="screen3.jpg" alt="Question 3" />
+				
+					</li>
+					<li class="query">
+					SELECT ProductName, QuantityPerUnit FROM webclass.products;
+					</li>
+				</ul>
+			</li>
+			<li>4) Write a query to get current Product list (Product ID and name)
+ 
+				<ul>
+					<li>
+					<img src="screen4.jpg" alt="Question 4" />
+				
+					</li>
+					<li class="query">
+					SELECT ProductID, ProductName, Discontinued FROM webclass.products WHERE Discontinued = '0';
+					</li>
+				</ul>
+			</li>
+			<li>5) Write a query to get discontinued Product list (Product ID and name).
+				<ul>
+					<li>
+					<img src="screen5.jpg" alt="Question 5" />
+				
+					</li>
+					<li class="query">
+					SELECT ProductID, ProductName, Discontinued FROM webclass.products WHERE Discontinued = '1';
+					</li>
+				</ul>
+			</li>
+			<li>6) Write a query to get most expense and least expensive Product list (name
+and unit price)
+				<ul>
+					<li>
+					<img src="screen6.jpg" alt="Question 6" />
+				
+					</li>
+					<li class="query">
+					SELECT p1.*, p2.* FROM 
+(SELECT productName as MINproductName, min(UnitPrice) as MINunitPrice FROM webclass.products) as p1,
+(SELECT productName as MAXproductName, max(UnitPrice) as MAXunitPrice  FROM webclass.products) as p2;
+
+					</li>
+				</ul>
+			</li>
+			<li>7) Write a query to get Product list (id, name, unit price) where current
+products cost less than $20.
+				<ul>
+					<li>
+					<img src="screen7.jpg" alt="Question 7" />
+				
+					</li>
+					<li class="query">
+					SELECT productID, productName, UnitPrice FROM webclass.products WHERE UnitPrice < 20;
+
+					</li>
+				</ul>
+			</li>
+			<li>8) Write a query to get Product list (id, name, unit price) where products cost
+between $15 and $25. 
+				<ul>
+					<li>
+					<img src="screen8.jpg" alt="Question 8" />
+				
+					</li>
+					<li class="query">
+					SELECT productID, productName, UnitPrice FROM webclass.products WHERE UnitPrice >= 15 and UnitPrice <=25;
+
+					</li>
+				</ul>
+			</li>
+			<li>9) Write a query to get Product list (name, unit price) of above average price.
+
+				<ul>
+					<li>
+					<img src="screen9.jpg" alt="Question 9" />
+				
+					</li>
+					<li class="query">
+					SELECT p2.productName, p2.UnitPrice FROM webclass.products as p2, (SELECT avg(UnitPrice) as average from products) as p1  WHERE p2.UnitPrice > p1.average
+
+					</li>
+				</ul>
+			</li>
+			<li>10) Write a query to get Product list (name, unit price) of ten most expensive
+products.
+				<ul>
+					<li>
+					<img src="screen10.jpg" alt="Question 10" />
+				
+					</li>
+					<li class="query">
+					SELECT productName, UnitPrice FROM webclass.products ORDER BY  UnitPrice DESC LIMIT 10;
+					</li>
+				</ul>
+			</li>
+			<li>11) Write a query to count current and discontinued products.
+				<ul>
+					<li>
+					<img src="screen11.jpg" alt="Question 11" />
+				
+					</li>
+					<li class="query">
+					SELECT c.current_count, d.discontinued_count FROM 
+(SELECT COUNT(productID) as current_count FROM webclass.products WHERE Discontinued = '0') as c,
+(SELECT COUNT(productID) as discontinued_count FROM webclass.products WHERE Discontinued = '1') as d;
+					</li>
+				</ul>
+			</li>			
+			<li>12) Write a query to get Product list (name, units on order , units in stock) of
+stock is less than the quantity on order.
+				<ul>
+					<li>
+					<img src="screen12.jpg" alt="Question 12" />
+				
+					</li>
+					<li class="query">
+					SELECT productName, UnitsOnOrder, UnitsInStock FROM webclass.products WHERE UnitsInStock < UnitsOnOrder;
+					</li>
+				</ul>
+			</li>
+		</ul>
+		</div>	
+	</body>
+</html>

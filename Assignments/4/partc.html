@@ -1,0 +1,159 @@
+<html>
+	<head>
+		<title>Assignment 4 | PART C</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style>
+		td {border: 1px solid purple;}
+		</style>
+	</head>
+	<body>
+	 
+		<h2>Assignment 4 | PART C</h2>
+		<ul>
+			<li><a href="./index.html">HOME</a></li>
+			<li><a href="./parta.html">PART A</a></li>
+			<li><a href="./partb.html">PART B</a></li>
+		</ul>
+		<h1>Play The Cat Matching Game</h1>
+		<h2 id="response"></h2>
+		
+<div id="selection">
+<select id="categories" name="categories">
+    <option value="cats">Cats</option>
+    <option value="abstract">Abstract</option>
+    <option value="animals">Animals</option>
+    <option value="business">Business</option>
+    <option value="city">City</option>
+    <option value="food">Food</option>
+    <option value="nature">Nature</option>
+</select>
+
+<select id="number" name="number">
+    <option value="8">8 Pictures</option>
+    <option value="10">10 Pictures</option>
+    <option value="12">12 Pictures</option>
+</select>
+
+<select id="difficulty" name="difficulty">
+    <option value="8">Easy ( 8 Seconds ) </option>
+    <option value="5">Normal ( 5 Seconds ) </option>
+    <option value="3">Hard ( 3 Seconds ) </option>
+</select>
+
+<button onclick="Game()">Start New Game</button>
+<div>
+		<table id="cats">
+
+		 </table>
+	</body>
+	
+	
+	<script>
+	var gametimer = 0;
+	var item1 = "";
+	var item2 = "";
+	var remaining = 0;
+	var number;
+	var endgametimer = null;
+	var startgallery = null;
+	var clearimg = null;
+	function clickImage(image_name, id_name){
+		if (item1 == "") {
+			item1 = image_name.trim();
+		} else if (item2 == "") {
+			item2 = image_name.trim();
+		}
+		
+			document.getElementById(id_name).style.opacity = "1";
+	
+		if (item1 == item2) {
+		console.log("matched" +item2 +item1);
+			document.getElementsByClassName(item2)[0].style.opacity = "1";
+			document.getElementsByClassName(item2)[1].style.opacity = "1";
+			document.getElementsByClassName(item2)[0].src = './checkmark.png';
+			document.getElementsByClassName(item2)[1].src = './checkmark.png';
+			remaining--;
+			item1 = "";
+			item2 = "";
+		}  else if (item1 !== "" && item2 !== ""){
+			console.log("not matched" +item2 +item1);
+			setTimeout(function(item1, item2) {
+			for (i = 0; i < number*2; i++) {
+			console.log('card_'+i + "and item1:" +item1);
+			console.log('card_'+i + "and item2:" +item2);
+				if (document.getElementById('card_'+i).className.includes(item1) || document.getElementById('card_'+i).className.includes(item2)) {
+				document.getElementById('card_'+i).style.opacity = "0"; 
+			}
+			}},  2000, item1, item2);
+			item1 = "";
+			item2 = "";
+		}
+		
+		if (remaining <= 0) {
+			winGame();
+		}
+	}
+
+	function winGame() {
+
+		document.getElementById("cats").innerHTML = "";
+		document.getElementById("response").innerHTML = "You WON! Congrats!";
+	}		
+	function endGame() {
+		document.getElementById("response").innerHTML = "Game Over. TRY AGAIN";
+
+	}	
+	function startGallery() {
+	  endgametimer = setTimeout(endGame, gametimer * 1000);
+	  for (i = 0; i < number*2; i++) {
+	  document.getElementById('card_'+i).style.opacity = "0"; 
+	  }
+	  document.getElementById("response").innerHTML = "Now, Match The Cards. <br>Good Luck, You have "+ gametimer + " seconds!";
+	}
+
+	
+	  function Game() {
+	  	number = parseInt(document.getElementById("number").value);
+		
+		remaining = number;
+	  	var difficulty = parseInt(document.getElementById("difficulty").value);
+	  	var categories = document.getElementById("categories").value;
+		if (number == 8) {
+			gametimer = 120;
+		} else if (number == 10) {
+		
+			gametimer = 150;
+		} else {
+		
+			 gametimer = 180;
+		}
+		
+		  document.getElementById("response").innerHTML = "Memorize This List. You have "+ difficulty + " seconds!";
+		startgallery = setTimeout(startGallery, difficulty*1000);
+		
+
+
+	  var table = document.getElementById("cats");
+	  table.innerHTML = "";
+	  
+	  var list = new Array();
+	  for (i = number*-1; i <= number; i++) {
+	  
+		if (i == 0) {continue;}
+		list.push(Math.abs(i));
+	  }
+	  list.sort(() => Math.random() - 0.5);
+		var cats 		 = table.insertRow();
+	  for (i = 0; i <= list.length; i++) {
+	  if(!isNaN(list[i])) {
+		cats.insertCell().innerHTML = '<img class="card_'+list[i]+' img" id="card_'+i+'" onclick=\'clickImage("card_'+list[i]+'", "card_'+i+'")\' src="http://lorempixel.com/200/200/'+categories+'/'+list[i]+'/"/ width="150" height="150">';
+		}
+		if ( i !== 0 && (i+1) % 4 == 0) {
+		
+		var cats 		 = table.insertRow();
+		}
+	  }
+		}
+	</script>
+</html>

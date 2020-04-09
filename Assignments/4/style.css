@@ -1,0 +1,17 @@
+table#employees {
+width: 80%;
+margin: 0 auto;
+border: 1px solid #40822b59;
+padding:10px;
+}
+table#employees th {background:#29bd3b47;}
+table#employees td, table#assignments th {padding:10px;}
+table#employees tr:nth-child(even) {background: #54775757;}
+table#employees tr:nth-child(odd) {background: #f1f1f1;}
+.subhead {text-align:center;font-weight:bold;}
+
+ul li {display:inline;padding: 10px;font-weight:bold;}
+ul {margin: 10px auto;text-align:center;}
+h2 {text-align:center;}
+#total {text-align:center;font-weight:bold;font-size:25px;color:#002bff;}
+#response {color:red;}
