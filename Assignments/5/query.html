@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>Nike | Search Catalog</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/> 
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Sans:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
+	</head>
+	<body>
+
+		<header><h1>Nike | <span>Search Catalog</span></h1>
+			<ul id="right_nav">
+				<li><a href="display.php" title="Order Catalog">Order Catalog</a></li>
+				<li><a href="query.html" title="Search Products">Search Products</a></li>
+				<li><a href="newpurchase.html" title="Add New Products">Add New Products</a></li>
+			</ul>
+		</header>
+			<div id="wrapper">
+			<div id="photo_area_two">
+			</div>
+			<div id="list">
+			<h2>Search For Product <a href="./display.php" title="Back To Catalog">(Back To Catalog)</a></h2>
+				<form action="./query.php" method="POST">
+					<table>				
+						<tr>
+							<td><label for="supplier_id">Supplier ID:</label></td>
+							<td><input type="text" id="supplier_id" name="supplier_id" placeholder="Supplier ID" min="1" required></td>
+						</tr>				
+						<tr>
+							<td>
+								<button type="submit">Search Products</button>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			</div>
+	</body>
+</html>

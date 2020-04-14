@@ -1,0 +1,30 @@
+* {margin:0;padding:0;line-height: 1.75em;}
+body {font-family: 'IBM Plex Sans', sans-serif;}
+h1,h2,h3,h4,h5,h6 {font-family: 'Bebas Neue', cursive;}
+header {display:block;}
+div#photo_area, div#photo_area_two, div#photo_area_three {background-image: url("./nike-shoes.jpg");background-repeat:no-repeat;background-size:cover; width:45%;}
+div#photo_area_two {background-image: url("./nike-shoes-4.jpg");min-height:100vh;}
+div#photo_area_three {background-image: url("./nike-shoes-2.jpg");min-height:100vh;}
+div#wrapper {display:flex;}
+header {border-bottom: 1px solid #e5e5e5;padding: 5px 20px;}
+#inventory {padding:20px;}
+#inventory th {padding:10px 5px;}
+#inventory tr:first-child {background:#f7f7f7;}
+#inventory td {padding:10px 10px;border: 1px solid #f7f7f7;}
+div#list {margin:0 auto;}
+#list h2 {text-align:center;margin-top:20px;}
+#list h2 a {color:#adadad; text-decoration:none;font-weight:200;padding-left:5px;}
+#list form table input {padding:10px;margin-bottom:10px;width:100%;border:  1px solid #b9aeae;}
+#list form table tr {margin:1px;}
+#list form button {background:black;color:white;padding:10px 35px;border-radius:50px;border:none;margin-top:20px;}
+#list form button:hover {cursor:pointer;} 
+#list h2.error {background:#e7e7e7; font-weight:200;font-size:1.75em;padding:20px 35px;}
+header #right_nav {margin-left: 20px;}
+header #right_nav li {display:inline-flex;list-style:none;margin:12px;}
+header #right_nav a {text-decoration:none;color:#312d2d;}
+header {display:flex;}
+img {display:block;margin: 20px;}
+
+div#hw_wrapper {margin:30px;font-weight:bold;font-size:1.25em;}
+div#hw_wrapper p {background:#f7f7ff;padding:10px;}
+
