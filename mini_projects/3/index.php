@@ -33,15 +33,15 @@ else if(isset($_COOKIE['email'])) {
 		
 			<li class="logged_in"><a href="#" title="Welcome Back">Welcome, <?php echo $_SESSION['email'];?></a></li>
 			<li><a href="./index.php?logout" title="Logout">Logout</a></li>
+			<li><a href="./account.php" title="Profile">Account</a></li>
 		<?php } else { ?>
 		
 			<li><a href="./login.php" title="Login">Login</a></li>
-			<li><a href="https://hackspurt.com/hackgsu/register/student" title="Signup">Register</a></li>
+			<li><a href="./register.php" title="Signup">Register</a></li>
 			
 		<?php } ?>
 			<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSftQZXD6Z4xM7di1TEhcDAXFgWHZ70dmDwNxdz-eYff0mkj7g/viewform" title="Signup">Volunteer</a></li>
-			<li><a href="http://hackgsu.com/faq" title="FAQ">FAQ</a></li>
-			<li><a href="mailto:hackathon@cs.gsu.edu" title="Contact">Contact</a></li>
+			<li><a href="./contact.php" title="Contact">Contact</a></li>
 			<li><a href="https://www.gsu.edu/" title="GSU Homepage">GSU Homepage</a></li>
 			<li><a href="https://youtu.be/Bnrudw-QzeE" title="YT Video">YT Video</a></li>			
 		</ul>
@@ -138,7 +138,7 @@ else if(isset($_COOKIE['email'])) {
 				</span>
 			</span>
 			<ul class="footer_links">
-			   <li><a href="https://hackspurt.com/hackgsu/register/student" title="Signup">Register Now</a></li>
+			   <li><a href="./register.php" title="Signup">Register Now</a></li>
 			   <li><a href="https://hackspurt.com/student" title="Check In Now">Check In Now</a></li>
 			   <li><a href="http://hackgsu.com/faq" title="About HackGSU">About HackGSU</a></li>
 			   <li><a href="https://www.gsu.edu/" title="GSU Home">GSU Website</a></li>	

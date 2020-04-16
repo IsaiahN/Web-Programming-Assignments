@@ -84,6 +84,7 @@ a {text-decoration:none;color:ivory;}
 a:hover {color:gray;}
 button, a.button {text-transform:uppercase;transition-duration: 0.4s;display:inline-block;background:#0039a6;outline:1px solid #0039a6;color:white;border:none;padding:15px 30px;margin-top:5px;margin-bottom:5px;}
 button:hover, a.button:hover, a.button.inverse {cursor:pointer;background:inherit;outline:1px solid #0039a6; }
+a.button.inverse.red {outline:3px solid red;}
 
 
 /* Menu */
@@ -157,11 +158,22 @@ div.action_section dl {padding-left:2vw;}
 #login li {list-style:none;display:inline-block;padding:0 15px;}
 #login hr {clear:both;border:none;border-bottom: 1px solid #414142;}
 #login form label {display:block;margin:25px 0px 10px 0px;}
-#login form input{display:block;width:100%;max-width:300px;padding:1em;border: none;border-radius:3px;margin-bottom:25px;}
+#login form input, #login form textarea , #login form select{display:block;width:100%;max-width:300px;padding:1em;border: none;border-radius:3px;margin-bottom:25px;}
 #login form a {padding: 13px 20px;margin: 5px 10px;vertical-align:bottom;}
 #login form button {font-family:inherit;font-size:inherit;}
 #login h2 {margin-top:0;float:left;font-weight:300;letter-spacing:2px;}
 #login h2 strong {font-weight: 500;}
+
+
+div#hero_right.hero_contact {
+    background: url(./hgsu10.jpg) !important;
+    background-size: cover !important;
+}
+
+div#hero_right.hero_register {
+    background: url(./hgsu2.jpg) !important;
+    background-size: cover !important;
+}
 
 /* Responsive */
 @media only screen and (max-width:968px) {
@@ -177,6 +189,8 @@ p, #footnote {line-height:1.75em;}
 #login {width:66%;padding: 2%;}
 #login_wrapper #hero_right {width:30%;}
 }
+
+
 
 @media only screen and (max-width:568px) {
 div#info_box h1 {font-size:3em;}
