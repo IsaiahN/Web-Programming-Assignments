@@ -43,7 +43,7 @@ else if(isset($_COOKIE['email'])) {
 			<li><a href="https://docs.google.com/forms/d/e/1FAIpQLSftQZXD6Z4xM7di1TEhcDAXFgWHZ70dmDwNxdz-eYff0mkj7g/viewform" title="Signup">Volunteer</a></li>
 			<li><a href="./contact.php" title="Contact">Contact</a></li>
 			<li><a href="https://www.gsu.edu/" title="GSU Homepage">GSU Homepage</a></li>
-			<li><a href="https://youtu.be/Bnrudw-QzeE" title="YT Video">YT Video</a></li>			
+			<li><a href="https://www.youtube.com/watch?v=ZUZaGlXsUEw" title="YT Video">YT Video</a></li>			
 		</ul>
 		</div>
 		<div id="hero_wrapper">
@@ -147,7 +147,7 @@ else if(isset($_COOKIE['email'])) {
 			   <li><a href="http://sponsors.hackgsu.com/hackGSU_Sponsorship_packet.pdf" title="Become A Sponsor">Become A Sponsor</a></li>
 			   <li><a href="http://hackgsu.com/schedule" title="Event Schedule">Event Schedule</a></li>
 			   <li><a href="https://forms.gle/Coz1MATrcqVScWiQ8" title="Travel Reimbursement">Travel Reimbursement</a></li>
-			   <li><a href="https://youtu.be/Bnrudw-QzeE" title="Youtube Video">YouTube: About This Page</a></li>
+			   <li><a href="https://www.youtube.com/watch?v=ZUZaGlXsUEw" title="Youtube Video">YouTube: About This Page</a></li>
 			</ul>
 			
 		</div>
