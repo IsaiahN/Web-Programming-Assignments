@@ -69,7 +69,7 @@ else if(isset($_COOKIE['email'])) {
 				   ACM &amp; IEEE student organizations. 100% free of charge, Lots of Food, $$ Prizes $$.
 				   This semester, HackGSU will be a 500+ participant event taking place from November 1- 3, 2019.
 				</p>
-				<a class="button" href="http://hackgsu.com/faq" title="Learn More">MORE</a>
+				<a class="button" href="http://hackgsu.com" title="Learn More">MORE</a>
 			</div>
 		</div>
 		<div class="grouped_box reverse_column">
@@ -83,7 +83,7 @@ else if(isset($_COOKIE['email'])) {
 					as well as a valid student or government ID. Feel free to also bring along a sleeping bag,
 					and we recommend some comfortable clothes (sweatpants and a hoodie are highly recommended).
 				</p>
-				<a class="button" href="http://hackgsu.com/faq" title="Learn More">MORE</a>
+				<a class="button" href="http://hackgsu.com" title="Learn More">MORE</a>
 			</div>
 		</div>
 		<div class="sponsor">
@@ -100,7 +100,7 @@ else if(isset($_COOKIE['email'])) {
 				<img src="./hgsu10.jpg" alt="Hack GSU photo">
 
 				<a class="button" href="https://goo.gl/forms/z4BOXGSxBFYqFsf13" title="Apply Now">Apply Now</a>
-				<a class="button inverse" href="#" title="Learn More">Learn More</a>
+				<a class="button inverse" href="http://hackgsu.com" title="Learn More">Learn More</a>
 			</div>
 			<div id="benefits">
 			<h2>Benefits</h2>
@@ -140,7 +140,7 @@ else if(isset($_COOKIE['email'])) {
 			<ul class="footer_links">
 			   <li><a href="./register.php" title="Signup">Register Now</a></li>
 			   <li><a href="https://hackspurt.com/student" title="Check In Now">Check In Now</a></li>
-			   <li><a href="http://hackgsu.com/faq" title="About HackGSU">About HackGSU</a></li>
+			   <li><a href="http://hackgsu.com" title="About HackGSU">About HackGSU</a></li>
 			   <li><a href="https://www.gsu.edu/" title="GSU Home">GSU Website</a></li>	
 			</ul>
 			<ul class="footer_links">

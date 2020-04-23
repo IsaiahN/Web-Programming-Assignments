@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 							$error = "Password is not correct.";
 						}
 					}
-					$error = "Username or Password May By Incorrect.";
+					$error = "Username or Password is Incorrect.";
 				}else {
 					$error = $conn->error;
 				}
