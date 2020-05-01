@@ -22,10 +22,6 @@
 <select id="categories" name="categories">
     <option value="cats">Cats</option>
     <option value="abstract">Abstract</option>
-    <option value="animals">Animals</option>
-    <option value="business">Business</option>
-    <option value="city">City</option>
-    <option value="food">Food</option>
     <option value="nature">Nature</option>
 </select>
 
@@ -147,7 +143,7 @@
 		var cats 		 = table.insertRow();
 	  for (i = 0; i <= list.length; i++) {
 	  if(!isNaN(list[i])) {
-		cats.insertCell().innerHTML = '<img class="card_'+list[i]+' img" id="card_'+i+'" onclick=\'clickImage("card_'+list[i]+'", "card_'+i+'")\' src="http://lorempixel.com/200/200/'+categories+'/'+list[i]+'/"/ width="150" height="150">';
+		cats.insertCell().innerHTML = '<img class="card_'+list[i]+' img" id="card_'+i+'" onclick=\'clickImage("card_'+list[i]+'", "card_'+i+'")\' src="./images/'+categories+'/'+list[i]+'.jpg"/ width="150" height="150">';
 		}
 		if ( i !== 0 && (i+1) % 4 == 0) {
 		
