@@ -10,7 +10,7 @@ require('./models/users.js');
 const app = express();
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || `mongodb+srv://admin:admin@cluster0-xskwg.mongodb.net/test?retryWrites=true&w=majority`, {useUnifiedTopology: true, useNewUrlParser: true});
+mongoose.connect(process.env.MONGODB_URI || `mongodb+srv://admin:admin@cluster0-xskwg.mongodb.net/isss_checkin?retryWrites=true&w=majority`, {useUnifiedTopology: true, useNewUrlParser: true});
 
 
 app.use(bodyParser.json());
